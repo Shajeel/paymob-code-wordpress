@@ -3,6 +3,7 @@
 <img width="1161" alt="Screenshot 2023-06-23 at 10 32 13 AM" src="https://github.com/Shajeel/paymob-code-wordpress/assets/20224168/52719dcd-39b5-4c8a-8525-e14846ee8720">
 
 **File:** class-wc-checkout.php
+
 **FilePath:** plugins/woocommerce/includes/class-wc-checkout.php
 **Line #:** 438
 **Code:**
