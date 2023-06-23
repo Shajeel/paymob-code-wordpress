@@ -79,3 +79,23 @@
                     }
                     //installments custom code
 ```
+
+
+<img width="1172" alt="Screenshot 2023-06-23 at 10 46 52 AM" src="https://github.com/Shajeel/paymob-code-wordpress/assets/20224168/1934128b-e61f-430c-88fe-e089fbc840df">
+
+**File:** class-wc-ajax.php
+
+**FilePath:** plugins/woocommerce/includes/class-wc-ajax.php
+
+**Line #:** 331
+
+**Code:**
+```
+		//installments custom code
+        if($_POST['payment_method'] == 'accept-online-2'){
+            WC()->session->set( 'chosen_payment_method', empty( 'accept-online' ) ? '' : wc_clean( wp_unslash( 'accept-online' ) ) );
+        }else {
+            WC()->session->set('chosen_payment_method', empty($_POST['payment_method']) ? '' : wc_clean(wp_unslash($_POST['payment_method'])));
+        }
+        //installments custom code
+```
