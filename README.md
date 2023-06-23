@@ -33,31 +33,31 @@
 
 **Code:**
 ```
-            //installments custom code
-            if($data['payment_method'] == 'accept-online-2'){
-                if ( ! isset( $available_gateways['accept-online'] ) ) {
-                    $errors->add( 'payment', __( 'Invalid payment method.', 'woocommerce' ) );
-                } else {
-                    if(!isset($_POST['installment-bank']) || !in_array($_POST['installment-bank'], ['Bank Alfalah', 'Faysal Bank'])){
-                        $errors->add( 'payment', __( 'Installment Bank Missing.', 'woocommerce' ) );
-                    } else {
-                        if($_POST['installment-bank'] == 'Bank Alfalah' && (!isset($_POST['installment-cnic'])) || !$_POST['installment-cnic']){
-                            $errors->add( 'payment', __( 'Installment Cnic Missing.', 'woocommerce' ) );
-                        }
-                    }
-                    if(!isset($_POST['installment-tenure']) || !in_array($_POST['installment-tenure'], ['3 Months', '6 Months', '9 Months', '12 Months'])){
-                        $errors->add( 'payment', __( 'Installment Tenure Missing.', 'woocommerce' ) );
-                    }
-                    $available_gateways['accept-online']->validate_fields();
-                }
-            } else {
-                if (!isset($available_gateways[$data['payment_method']])) {
-                    $errors->add('payment', __('Invalid payment method.', 'woocommerce'));
-                } else {
-                    $available_gateways[$data['payment_method']]->validate_fields();
-                }
-            }
-            //installments custom code
+    //installments custom code
+    if($data['payment_method'] == 'accept-online-2'){
+	if ( ! isset( $available_gateways['accept-online'] ) ) {
+	    $errors->add( 'payment', __( 'Invalid payment method.', 'woocommerce' ) );
+	} else {
+	    if(!isset($_POST['installment-bank']) || !in_array($_POST['installment-bank'], ['Bank Alfalah', 'Faysal Bank'])){
+		$errors->add( 'payment', __( 'Installment Bank Missing.', 'woocommerce' ) );
+	    } else {
+		if($_POST['installment-bank'] == 'Bank Alfalah' && (!isset($_POST['installment-cnic'])) || !$_POST['installment-cnic']){
+		    $errors->add( 'payment', __( 'Installment Cnic Missing.', 'woocommerce' ) );
+		}
+	    }
+	    if(!isset($_POST['installment-tenure']) || !in_array($_POST['installment-tenure'], ['3 Months', '6 Months', '9 Months', '12 Months'])){
+		$errors->add( 'payment', __( 'Installment Tenure Missing.', 'woocommerce' ) );
+	    }
+	    $available_gateways['accept-online']->validate_fields();
+	}
+    } else {
+	if (!isset($available_gateways[$data['payment_method']])) {
+	    $errors->add('payment', __('Invalid payment method.', 'woocommerce'));
+	} else {
+	    $available_gateways[$data['payment_method']]->validate_fields();
+	}
+    }
+    //installments custom code
 ```
 
 
