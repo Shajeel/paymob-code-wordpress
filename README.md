@@ -103,7 +103,6 @@ if($_POST['payment_method'] == 'accept-online-2'){
 
 <img width="1172" alt="Screenshot 2023-06-23 at 11 35 37 AM" src="https://github.com/Shajeel/paymob-code-wordpress/assets/20224168/57c98e81-9807-4e49-a404-1099518e11c0">
 
-
 **File:** class-wc-form-handler.php
 
 **FilePath:** plugins/woocommerce/includes/class-wc-form-handler.php
@@ -128,4 +127,38 @@ if($_POST['payment_method'] == 'accept-online-2'){
     $order->set_payment_method($payment_method);
 }
 //installments custom code
+```
+
+
+<img width="1172" alt="Screenshot 2023-06-23 at 11 38 36 AM" src="https://github.com/Shajeel/paymob-code-wordpress/assets/20224168/9246181b-79fc-464b-9e84-4aa375af3db8">
+
+**File:** payment-method.php
+
+**FilePath:** plugins/woocommerce/templates/checkout/payment-method.php
+
+**Line #:** 31
+
+**Code:**
+```
+    <?php if($gateway->id == 'accept-online-2') : ?>
+	<div class="select-bank1">
+	    <select class="form-control" style="margin: 10px 0;" name="installment-bank" required>
+		<option value="">Select Bank</option>
+		<option value="Bank Alfalah">Bank Alfalah</option>
+	    </select>
+	    <p>*Valid for credit card users only.</p>
+	    <select class="form-control" style="margin: 10px 0;" name="installment-tenure" required>
+		<option value="">Select Tenure</option>
+		<option value="3 Months">3 Months</option>
+		<option value="6 Months">6 Months</option>
+		<option value="9 Months">9 Months</option>
+		<option value="12 Months">12 Months</option>
+	    </select>
+	    <p>Bank Processing Fee: 3 Months: 5.5% + FED | 6 Months: 8% + FED | 9 Months: 10% + FED | 12 Months: 12% + FED</p>
+	    <p style="color: red;">These charges will be shown one time in your credit cards's monthly statement.</p>
+	    <div class="select-input"><label>Enter CNIC (Required by Bank)</label>
+		<input autocomplete="off" type="text" name="installment-cnic">
+	    </div>
+	</div>
+    <?php endif; ?>
 ```
