@@ -61,13 +61,13 @@
 ```
 
 
-<img width="1161" alt="Screenshot 2023-06-23 at 10 42 30 AM" src="https://github.com/Shajeel/paymob-code-wordpress/assets/20224168/53983cdb-0b12-4264-ace0-5558f2941191">
+<img width="1172" alt="Screenshot 2023-06-23 at 10 44 14 AM" src="https://github.com/Shajeel/paymob-code-wordpress/assets/20224168/a08c28ad-624b-4c53-9074-bd682082b0cf">
 
 **File:** class-wc-checkout.php
 
 **FilePath:** plugins/woocommerce/includes/class-wc-checkout.php
 
-**Line #:** 959
+**Line #:** 1309
 
 **Code:**
 ```
