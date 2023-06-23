@@ -91,7 +91,7 @@
 
 **Code:**
 ```
-		//installments custom code
+	//installments custom code
         if($_POST['payment_method'] == 'accept-online-2'){
             WC()->session->set( 'chosen_payment_method', empty( 'accept-online' ) ? '' : wc_clean( wp_unslash( 'accept-online' ) ) );
         }else {
