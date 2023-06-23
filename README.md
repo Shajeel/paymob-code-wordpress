@@ -71,13 +71,13 @@
 
 **Code:**
 ```
-                    //installments custom code
-                    if($posted_data['payment_method'] == 'accept-online-2'){
-                        $this->process_order_payment( $order_id, 'accept-online' );
-                    } else {
-                        $this->process_order_payment($order_id, $posted_data['payment_method']);
-                    }
-                    //installments custom code
+    //installments custom code
+    if($posted_data['payment_method'] == 'accept-online-2'){
+	$this->process_order_payment( $order_id, 'accept-online' );
+    } else {
+	$this->process_order_payment($order_id, $posted_data['payment_method']);
+    }
+    //installments custom code
 ```
 
 
@@ -91,13 +91,13 @@
 
 **Code:**
 ```
-	//installments custom code
-        if($_POST['payment_method'] == 'accept-online-2'){
-            WC()->session->set( 'chosen_payment_method', empty( 'accept-online' ) ? '' : wc_clean( wp_unslash( 'accept-online' ) ) );
-        }else {
-            WC()->session->set('chosen_payment_method', empty($_POST['payment_method']) ? '' : wc_clean(wp_unslash($_POST['payment_method'])));
-        }
-        //installments custom code
+//installments custom code
+if($_POST['payment_method'] == 'accept-online-2'){
+    WC()->session->set( 'chosen_payment_method', empty( 'accept-online' ) ? '' : wc_clean( wp_unslash( 'accept-online' ) ) );
+}else {
+    WC()->session->set('chosen_payment_method', empty($_POST['payment_method']) ? '' : wc_clean(wp_unslash($_POST['payment_method'])));
+}
+//installments custom code
 ```
 
 
@@ -111,11 +111,11 @@
 
 **Code:**
 ```
-                        //installments custom code
-                        if($_POST['payment_method'] == 'accept-online-2'){
-                            $payment_method     = isset( $available_gateways[ 'accept-online' ] ) ? $available_gateways[ 'accept-online' ] : false;
-                        }else {
-                            $payment_method = isset($available_gateways[$payment_method_id]) ? $available_gateways[$payment_method_id] : false;
-                        }
-                        //installments custom code
+//installments custom code
+if($_POST['payment_method'] == 'accept-online-2'){
+    $payment_method     = isset( $available_gateways[ 'accept-online' ] ) ? $available_gateways[ 'accept-online' ] : false;
+}else {
+    $payment_method = isset($available_gateways[$payment_method_id]) ? $available_gateways[$payment_method_id] : false;
+}
+//installments custom code
 ```
