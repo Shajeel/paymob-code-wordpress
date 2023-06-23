@@ -11,23 +11,14 @@
 **Code:**
 ```
 //installments custom code
-
 if($data['payment_method'] == 'accept-online-2'){
-
     $order->set_payment_method('Installment (Credit Cards)');
-    
     $order->update_meta_data('installment_bank', $_POST['installment-bank']);
-    
     $order->update_meta_data('installment_cnic', $_POST['installment-cnic']);
-    
     $order->update_meta_data('installment_tenure', $_POST['installment-tenure']);
-    
 }else {
-
     $order->set_payment_method(isset($available_gateways[$data['payment_method']]) ? $available_gateways[$data['payment_method']] : $data['payment_method']);
-    
 }
-```
-
 //installments custom code
+```
 
