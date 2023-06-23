@@ -101,13 +101,14 @@ if($_POST['payment_method'] == 'accept-online-2'){
 ```
 
 
-<img width="1172" alt="Screenshot 2023-06-23 at 11 25 18 AM" src="https://github.com/Shajeel/paymob-code-wordpress/assets/20224168/099c8aa8-293f-4ad1-95ee-b29e5963793d">
+<img width="1172" alt="Screenshot 2023-06-23 at 11 35 37 AM" src="https://github.com/Shajeel/paymob-code-wordpress/assets/20224168/57c98e81-9807-4e49-a404-1099518e11c0">
+
 
 **File:** class-wc-form-handler.php
 
 **FilePath:** plugins/woocommerce/includes/class-wc-form-handler.php
 
-**Line #:** 426
+**Line #:** 426, 437
 
 **Code:**
 ```
@@ -116,6 +117,15 @@ if($_POST['payment_method'] == 'accept-online-2'){
     $payment_method     = isset( $available_gateways[ 'accept-online' ] ) ? $available_gateways[ 'accept-online' ] : false;
 }else {
     $payment_method = isset($available_gateways[$payment_method_id]) ? $available_gateways[$payment_method_id] : false;
+}
+//installments custom code
+```
+```
+//installments custom code
+if($_POST['payment_method'] == 'accept-online-2'){
+    $order->set_payment_method('Installment (Credit Cards)');
+}else {
+    $order->set_payment_method($payment_method);
 }
 //installments custom code
 ```
