@@ -5,8 +5,11 @@
 **File:** class-wc-checkout.php
 
 **FilePath:** plugins/woocommerce/includes/class-wc-checkout.php
+
 **Line #:** 438
+
 **Code:**
+
 //installments custom code
 if($data['payment_method'] == 'accept-online-2'){
     $order->set_payment_method('Installment (Credit Cards)');
