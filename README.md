@@ -9,7 +9,7 @@
 **Line #:** 438
 
 **Code:**
-
+```
 //installments custom code
 
 if($data['payment_method'] == 'accept-online-2'){
@@ -27,6 +27,7 @@ if($data['payment_method'] == 'accept-online-2'){
     $order->set_payment_method(isset($available_gateways[$data['payment_method']]) ? $available_gateways[$data['payment_method']] : $data['payment_method']);
     
 }
+```
 
 //installments custom code
 
