@@ -162,3 +162,18 @@ if($_POST['payment_method'] == 'accept-online-2'){
 	</div>
     <?php endif; ?>
 ```
+
+<img width="1144" alt="Screenshot 2023-07-21 at 7 01 12 PM" src="https://github.com/Shajeel/paymob-code-wordpress/assets/20224168/84a74d14-d890-445b-a759-28704e19c67f">
+
+
+**File:** class-alg-wc-order-fees.php
+**FilePath:** plugins/checkout-fees-for-woocommerce/includes/class-alg-wc-order-fees.php
+
+**Line #:** 88
+
+**Code:**
+```
+    if($payment_method == 'accept-online-2'){
+	$payment_method = 'accept-online';
+    }
+```
