@@ -166,6 +166,7 @@ if($_POST['payment_method'] == 'accept-online-2'){
 <img width="1144" alt="Screenshot 2023-07-21 at 7 01 12 PM" src="https://github.com/Shajeel/paymob-code-wordpress/assets/20224168/84a74d14-d890-445b-a759-28704e19c67f">
 
 **File:** class-alg-wc-order-fees.php
+
 **FilePath:** plugins/checkout-fees-for-woocommerce/includes/class-alg-wc-order-fees.php
 
 **Line #:** 88
@@ -180,6 +181,7 @@ if($_POST['payment_method'] == 'accept-online-2'){
 <img width="1144" alt="Screenshot 2023-07-21 at 7 05 29 PM" src="https://github.com/Shajeel/paymob-code-wordpress/assets/20224168/eb9438af-64a5-4cc2-bcfb-2895c735f118">
 
 **File:** class-alg-wc-order-fees.php
+
 **FilePath:** plugins/checkout-fees-for-woocommerce/includes/class-alg-wc-order-fees.php
 
 **Line #:** 129
@@ -194,6 +196,7 @@ if($_POST['payment_method'] == 'accept-online-2'){
 <img width="1144" alt="Screenshot 2023-07-21 at 7 06 48 PM" src="https://github.com/Shajeel/paymob-code-wordpress/assets/20224168/eb551096-30fc-4cb4-b1e9-7698e3e9d7af">
 
 **File:** class-alg-wc-order-fees.php
+
 **FilePath:** plugins/checkout-fees-for-woocommerce/includes/class-alg-wc-order-fees.php
 
 **Line #:** 198
