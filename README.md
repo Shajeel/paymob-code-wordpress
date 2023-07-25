@@ -218,7 +218,7 @@ if($_POST['payment_method'] == 'accept-online-2'){
 
 **Code:**
 ```
-    if($payment_method == 'accept-online-2'){
-	$payment_method = 'accept-online';
+    if($current_gateway == 'accept-online-2'){
+	$current_gateway = 'accept-online';
     }
 ```
